@@ -1,0 +1,210 @@
+/* Configuración General y Fondo */
+body {
+    background-color: #121214;
+    color: #e1e1e6;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Contenedor Principal (Tarjeta del Formulario) */
+.form-container {
+    background-color: #202024;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    width: 100%;
+    max-width: 450px;
+}
+
+/* Encabezado */
+.header-section {
+    text-align: center;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #323238;
+    padding-bottom: 15px;
+}
+
+.header-section h1 {
+    font-size: 24px;
+    margin: 0 0 5px 0;
+    color: #00adb5;
+}
+
+.header-section p {
+    font-size: 13px;
+    color: #7c7c8a;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Grupos de Inputs (Formularios) */
+.input-group {
+    margin-bottom: 18px;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #c4c4cc;
+    font-weight: 500;
+}
+
+.input-group input {
+    background-color: #121214;
+    border: 2px solid #29292e;
+    border-radius: 5px;
+    color: #ffffff;
+    padding: 12px;
+    font-size: 15px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+/* Efecto al hacer clic en los inputs */
+.input-group input:focus {
+    outline: none;
+    border-color: #00adb5;
+    box-shadow: 0 0 8px rgba(0, 173, 181, 0.3);
+}
+
+/* Contenedor de Botones */
+.button-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+/* Estilo Base de los Botones */
+button {
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 12px;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* Colores personalizados para cada acción del CRUD */
+.btn-save {
+    background-color: #04d361;
+}
+.btn-save:hover {
+    background-color: #029f49;
+}
+
+.btn-get {
+    background-color: #00adb5;
+}
+.btn-get:hover {
+    background-color: #00878e;
+}
+
+.btn-update {
+    background-color: #ffbb00;
+    color: #121214;
+}
+.btn-update:hover {
+    background-color: #d49c00;
+}
+
+.btn-delete {
+    background-color: #f75a68;
+}
+.btn-delete:hover {
+    background-color: #cc4350;
+}
+
+/* Espacio dinámico para respuestas o notificaciones */
+.divs-output {
+    background-color: #121214;
+    border-left: 4px solid #00adb5;
+    border-radius: 4px;
+    color: #00adb5;
+    font-family: monospace;
+    font-size: 13px;
+    margin-bottom: 20px;
+    padding: 12px;
+    display: none; /* Se puede mostrar desde JS cambiando a 'block' */
+}
+
+.input-alert{
+    background-color: #121214;
+    font-size: x-large;
+    padding: 8%;
+    border: #00878e;
+    border-radius: 12px;
+    color: #00adb5;
+    font-family: monospace;
+    display: block;
+    
+}
+
+/* Elementos Tabla de datos */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    padding: 10%;
+    margin-top: 8%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th {
+    background-color: #1a252f;
+    color: #ffffff;
+    text-align: left;
+    padding: 15px;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+tr:last-child td {
+    border-bottom: none;
+
+    }
+
+tr:hover {
+    background-color: #f5f7fa;
+
+    }
+tr:hover td {
+  background-color: #f7fafc; 
+  color: #1a202c;
+}
+
+/* Celda del ID (Negrita y un tono más oscuro) */
+td:first-child {
+  font-weight: bold;
+  color: #2d3748;
+}
+
+/* Celda de Precio (Color verde éxito y texto destacado) */
+.precio {
+  font-weight: 700;
+  color: #38a169; 
+  font-family: 'Courier New', Courier, monospace; /* Tipografía estilo caja registradora */
+}
+
+/* Celda de Stock (Estilo etiqueta/badge de inventario) */
+.stock-celda {
+  font-weight: 500;
+  color: #4a5568;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventario - CRUD</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <form class="form-container" id="formularioProducto">
+        
+        <div class="header-section">
+            <h1>Bienvenido al Inventario</h1>
+            <p>XAMPP + Visual Studio Code</p>
+        </div>
+
+        <div class="divs-output" id="divs"></div>
+
+        
+        <div class="input-group">
+            <label for="id">ID del Producto</label>
+            <input type="number" name="id" id="id" placeholder="Ejem: 15"> 
+        </div>
+
+        <div class="input-group">
+            <label for="nombre">Nombre del Producto</label>
+            <input type="text" name="nombre" id="nombre" placeholder="Ejem: Manzana"> 
+        </div>
+
+        <div class="input-group">
+            <label for="precio">Precio</label>
+            <input type="number" step="0.01" name="precio" id="precio" placeholder="Ejem: 54.90"> 
+        </div>
+
+        <div class="input-group">
+            <label for="precio">Stock</label>
+            <input type="number" name="stock" id="stock" placeholder="Ejem: 10"> 
+        </div>
+        
+        <div class="input-group">
+            <label for="precio">Proveedor</label>
+            <input type="text" step="1" class="proveedor" id="proveedor" placeholder="Ejem: Bimbo"> 
+        </div>
+
+        <div class="input-group"></div>
+
+        <div class="input-alert">
+            <label class="alertas" id="alertas"></label>
+        </div>
+        
+        <div>
+         <table >
+         <thead>
+         <tr>
+         <th>ID</th>
+         <th>Nombre</th>
+         <th>Precio</th>
+         <th>Stock</th>
+         <th>Proveedor</th>
+         </tr>
+         </thead>
+         <tbody>
+            <tbody id="tablaProductos">
+      <!-- Los datos de MySQL se cargarán aquí -->
+         </tbody>
+        </div>
+
+        <div class="button-grid">
+            <button type="submit" class="btn-save" id="btn-save">Guardar</button>
+            <button type="button" class="btn-get" id ="btn-get">Traer por ID</button>
+            <button type="button" class="btn-update" id="btn-update">Actualizar</button>
+            <button type="button" class="btn-delete" id="btn-delete"> Eliminar</button>
+        </div>
+
+    </form>
+    
+</body>
+ <script src="inventario.js"></script>
+</html>
